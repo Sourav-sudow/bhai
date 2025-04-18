@@ -1,0 +1,40 @@
+.cursor-trail-dot {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(123, 198, 255, 0.8)
+  );
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease;
+  mix-blend-mode: exclusion;
+  filter: blur(0.5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+}
+
+.cursor-trail-dot:nth-child(3n) {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 123, 233, 0.8),
+    rgba(123, 198, 255, 0.8)
+  );
+}
+
+.cursor-trail-dot:nth-child(3n + 1) {
+  background: linear-gradient(
+    45deg,
+    rgba(123, 255, 198, 0.8),
+    rgba(255, 198, 123, 0.8)
+  );
+}
+
+@media (max-width: 768px) {
+  .cursor-trail-dot {
+    display: none;
+  }
+} 
