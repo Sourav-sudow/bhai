@@ -76,6 +76,10 @@ interface Para {
   split?: SplitText;
 }
 
+interface Title extends Para {
+  split?: SplitText;
+}
+
 const paras: Para[] = [
   {
     element: ".about-info p",
@@ -88,7 +92,7 @@ const paras: Para[] = [
   },
 ];
 
-const titles = [
+const titles: Title[] = [
   {
     element: ".about-info h2",
   },
